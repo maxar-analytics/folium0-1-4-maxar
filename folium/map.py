@@ -556,7 +556,7 @@ class Tooltip(MacroElement):
         kwargs: Dict[str, TypeJsonValue],
     ) -> Dict[str, TypeJsonValue]:
         """Validate the provided kwargs and return options as json string."""
-        kwargs = {camelize(key): value for key, value in kwargs.items()}
+        kwargs = {key: value for key, value in kwargs.items()}
         for key in kwargs.keys():
             assert (
                 key in self.valid_options
