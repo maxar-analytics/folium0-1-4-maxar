@@ -390,7 +390,7 @@ def get_obj_in_upper_tree(element: Element, cls: Type) -> Element:
 
 def parse_options(**kwargs: TypeJsonValue) -> Dict[str, TypeJsonValueNoNone]:
     """Return a dict with lower-camelcase keys and non-None values.."""
-    return {camelize(key): value for key, value in kwargs.items() if value is not None}
+    return {key: value for key, value in kwargs.items() if value is not None}
 
 
 def escape_backticks(text: str) -> str:
